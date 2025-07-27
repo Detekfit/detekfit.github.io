@@ -5626,7 +5626,7 @@ class CompiledApp {
 "User-Centric design",
 "Global Impact",
 "clamp",
-"https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg",
+"https://i.ibb.co/RpJcCSvw/pexels-photo-2653362.jpg",
 "Create. Innovate. Transfrom.",
 "Empowiring the world with user-friednly, Free Android apps",
 "Explore Apps",
