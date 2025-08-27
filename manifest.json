@@ -1,6 +1,6 @@
 {
-    "name": "wriink",
-    "short_name": "wriink",
+    "name": "detekfitweb",
+    "short_name": "detekfitweb",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
