@@ -159,7 +159,7 @@ sup {
 
 .moreinfotext {
     font-size: 14px;
-    font-weight: lighter;
+    font-weight: 500;
     color: #6d6d6d;
    
 }
@@ -212,4 +212,5 @@ sup {
 @keyframes underline-rainbow {
     0% { background-position: 0% 50%; }
     100% { background-position: 200% 50%; }
+
 }
