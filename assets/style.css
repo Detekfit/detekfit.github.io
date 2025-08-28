@@ -39,7 +39,7 @@ sup {
     font-size: clamp(2.5rem, 6vw, 4rem); /* Responsive font size */
     font-weight: 700;
     line-height: 1.1;
-    margin-block: 1.5rem;
+    margin-block: 1.0rem;
 }
 
 .description {
@@ -53,18 +53,18 @@ sup {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.20rem; /* 20px */
+    gap: 1rem; /* 20px */
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem; /* 12px */
+    gap: 0.50rem; /* 12px */
 }
 
 .logo-img {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
 }
 
 /* 4. Components: Button & Social Links */
@@ -75,9 +75,9 @@ sup {
     text-decoration: none;
     font-weight: 700;
     font-size: 1rem;
-    padding: 0.875rem 1.75rem; /* 14px 28px */
+    padding: 0.700rem 1.50rem; /* 14px 28px */
     border-radius: 6px;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
@@ -123,4 +123,93 @@ sup {
     .container {
         gap: 1.5rem; /* 24px */
     }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: inherit;
+}
+
+.moreinfo-responsive {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+    .moreinfo-responsive {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.moreinfocard {
+    display: flex;
+    flex: 1;
+    min-width: 250px;
+    max-width: 100%;
+    background-color: #F9F9F5;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+    padding: 1rem 1rem;
+    border: 1px solid #68676723;
+}
+
+.moreinfotext {
+    font-size: 14px;
+    font-weight: lighter;
+    color: #6d6d6d;
+   
+}
+
+.footer {
+    width: 100%;
+    text-align: left;
+    color: #6d6d6d;
+    font-size: 12px;
+}
+
+.linkstyle {
+    font-size: 1rem;
+    color: #2E2E2E;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 
+        color 0.3s,
+        text-shadow 0.3s;
+}
+
+.linkstyle {
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+}
+
+.linkstyle::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff005a, #ffbe00, #00ff94, #00cfff, #a259ff, #ff005a 100%);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(.77,0,.18,1);
+    z-index: -1;
+}
+
+.linkstyle:hover {
+    color: #2E2E2E;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.linkstyle:hover::after {
+    transform: scaleX(1);
+    animation: underline-rainbow 1.2s linear infinite;
+}
+
+@keyframes underline-rainbow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
 }
