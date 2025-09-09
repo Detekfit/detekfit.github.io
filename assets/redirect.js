@@ -1,19 +1,28 @@
 /**
- * @fileoverview This script handles URL redirection based on the current full URL.
- * It checks if the URL matches a specific path and redirects the user to a new URL.
+ * @fileoverview This script handles URL redirection for multiple apps
+ * based on the current URL path. It uses a scalable map to store
+ * app-specific redirect URLs.
  */
 
 window.onload = function() {
-    // Define the target full URL string. This is more robust than just checking the pathname.
-    // We use .includes() to handle both with and without trailing slash cases.
-    const targetUrlPart = 'detekfit.com/app-download:thinkink';
-    const redirectUrl = 'https://play.google.com/store/apps/details?id=com.wriink.thinkink';
-    
-    // Get the current full URL.
-    const currentUrl = window.location.href.toLowerCase();
+    // A map to store app paths and their corresponding redirect URLs.
+    // Add new apps to this map to scale the project.
+    const redirectsMap = new Map([
+      ['thinkink', 'https://play.google.com/store/apps/details?id=com.wriink.thinkink'],
+      ['gcam', 'https://play.google.com/store/apps/details?id=com.octocore.gcamconfig'],
+      // Add more apps here.
+      // ['app-name', 'https://your-app-store-url.com'],
+    ]);
   
-    // Check if the current URL includes the target string.
-    if (currentUrl.includes(targetUrlPart)) {
+    // Get the last part of the URL path, which corresponds to the app's folder name.
+    // Example: '/detekfit.com/thinkink' -> 'thinkink'
+    const pathParts = window.location.pathname.toLowerCase().split('/').filter(Boolean);
+    const appPath = pathParts[pathParts.length - 1];
+  
+    // Check if the app path exists in our redirects map.
+    if (redirectsMap.has(appPath)) {
+      const redirectUrl = redirectsMap.get(appPath);
+  
       // Show the redirection overlay
       const overlay = document.getElementById('redirect-overlay');
       if (overlay) {
