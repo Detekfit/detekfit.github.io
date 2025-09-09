@@ -1,23 +1,37 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="..assets/style.css">
-    <script src="../assets/redirect.js"></script>
-    <title>Redirecting...</title>
+    <title>Redirecting to ThinkInk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <main class="container">
-        <div class="overlay" id="redirect-overlay">
-          <div class="dialog">
-            <h2 class="redirect-text">Redirecting...</h2>
-            <div class="progress-bar-container">
-              <div class="progress-bar"></div>
+    <div id="redirect-overlay" class="overlay">
+        <div class="dialog">
+            <div class="app-info">
+                <div class="image-container">
+                    <img src="../assets/images/thinkink.png" alt="ThinkInk App Icon">
+                </div>
+                <div class="text-info">
+                    <div class="app-name">ThinkInk - Ai Studio App</div>
+                    <div class="app-category">Tools • Productivity</div>
+                </div>
             </div>
-          </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="manual-redirect-text">
+                If you are not redirected, click the button below.
+            </div>
+            <button id="manual-redirect-btn" class="redirect-button">
+                Continue
+            </button>
         </div>
-      </main>
-    
-      
+    </div>
+    <script src="../assets/redirect.js"></script>
 </body>
 </html>
