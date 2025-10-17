@@ -1,2 +1,5 @@
-# Google Admob
+# Elite account
+google.com, pub-4326466930413761, DIRECT, f08c47fec0942fa0
+
+# New account
 google.com, pub-7264300345426552, DIRECT, f08c47fec0942fa0
