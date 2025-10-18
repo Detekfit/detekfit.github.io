@@ -384,11 +384,13 @@
 
     /* Apps Section Styles */
     .apps-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     width: 100%;
-    margin-top: 1rem;
+    max-width: 800px;
+    margin: 1rem auto 0;
+    justify-content: center;
     }
 
     .app-card {
@@ -396,6 +398,8 @@
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 1.5rem;
+    min-width: 300px;
+    max-width: 100%;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease, border-color 0.3s ease;
     }
 
@@ -416,11 +420,12 @@
     top: -1px;
     right: -1px;
     background: var(--button-color);
-    color: var(--text-color);
+    color: var(--button-text-color);
     font-size: 0.7rem;
     font-weight: 700;
     padding: 0.25rem 0.75rem;
     border-radius: 0 12px 0 12px;
+    transition: color 0.3s ease;
     }
 
     .app-header {
@@ -535,19 +540,12 @@
     }
 
     /* Responsive Design for Apps Section */
-    @media (min-width: 768px) {
-    .apps-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
-    }
-    }
-
     @media (max-width: 768px) {
     .apps-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
+    max-width: 100%;
     }
     }
 
