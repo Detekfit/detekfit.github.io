@@ -3,3 +3,6 @@ google.com, pub-4326466930413761, DIRECT, f08c47fec0942fa0
 
 # New account
 google.com, pub-7264300345426552, DIRECT, f08c47fec0942fa0
+
+# Liftoff
+vungle.com, 6932de9638cf425060b46f65, DIRECT, c107d686becd2d77
