@@ -6,3 +6,6 @@ google.com, pub-7264300345426552, DIRECT, f08c47fec0942fa0
 
 # Liftoff
 vungle.com, 6932de9638cf425060b46f65, DIRECT, c107d686becd2d77
+
+# Meta audience network
+facebook.com, 732383519961798, DIRECT, c3e20eee3f780d68
